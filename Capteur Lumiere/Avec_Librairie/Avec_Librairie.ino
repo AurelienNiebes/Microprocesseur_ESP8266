@@ -34,7 +34,7 @@
 
 // Pin that LED is connected to
 // Connect LED With 100ohm resistor
-#define LEDPin 13 
+#define LEDPin LED_BUILTIN
 
 // Initialize the BH1750FVI class
 BH1750FVI LightSensor;
@@ -69,15 +69,13 @@ void loop() {
   // put your main code here, to run repeatedly:
   
   // Get the value in lux.  It returns a float that's significant to 1 or 2 digits
-  float lux = LightSensor.GetLux();// Get Lux value
-  
+  float lux = 0;// Get Lux value
+  lux=LightSensor.GetLux();
   // Print out the lux value
   Serial.print("Light: ");
   Serial.print(lux);
   Serial.println(" lux");
   
-  Serial.print("Led: ");
-  Serial.println(LED_BUILTIN);
   // Measure every second
   delay(1000);
 }

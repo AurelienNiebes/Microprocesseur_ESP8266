@@ -18,7 +18,7 @@
 #include "Wire.h"
 
 // I2C device addresses
-#define Addr_LOW 0x46 // Device address when address pin LOW
+#define Addr_LOW 0x23 // Device address when address pin LOW
 #define Addr_HIGH 0xB8 // Device address when address pin High
 
 //All commands here are taken from Data sheet OPECODE Table page 5
