@@ -2,14 +2,6 @@
   This is a simple sketch to test BH1750FVI Light Sensor
   which communicates using the I2C Protocol 
   
-  It writes out the lux value over the serial port
-  Connect this sensor as follows:
-  VCC >>> 3.3V or 5V
-  SDA >>> A4 
-  SCL >>> A5
-  addr >> Gnd or VCC
-  Gnd >>> Gnd
-  
   BH1750FVI Sensor Setup 
   
   ##### I2C Addresses #####
@@ -31,19 +23,10 @@
 // The library includes
 #include <Wire.h>
 #include "BH1750FVI.h"
-
-// Pin that LED is connected to
-// Connect LED With 100ohm resistor
-#define LEDPin LED_BUILTIN
-
 // Initialize the BH1750FVI class
 BH1750FVI LightSensor;
 
-
-
 void setup() {   
-  // put your setup code here, to run once:
-  
   // Start Serial communication
    Serial.begin(115200);
  

@@ -6,7 +6,7 @@
 // Created 29 March 2006
 // This example code is in the public domain.
 #include <Wire.h>
-int Adresse=0x23;//0x46;
+int Adresse=0x46>>1;//0x46;
 void setup() {
   Wire.begin();        // join i2c bus (address optional for master)
   Serial.begin(115200);  // start serial for output
